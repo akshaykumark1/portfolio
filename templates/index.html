@@ -12,441 +12,1177 @@
  
 
     <title>AKSHAY Portfolio</title>
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        box-sizing: border-box;
-    }
-    
-    body {
-        width: 100%;
-        overflow-x: hidden;
-        background: linear-gradient(135deg, #141e30, #243b55);
-        color: #f5f5f5;
-    }
-    
-    nav {
-        width: 100%;
-        height: 10vh;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(20, 30, 48, 0.8);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(10px);
-    }
-    
-    .nav-container {
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        color: #00d4ff;
-        font-size: 2rem;
-        font-weight: bold;
-        text-shadow: 0 0 10px #00d4ff;
-    }
-    
-    .logo span {
-        color: #ff007a;
-        text-shadow: 0 0 10px #ff007a;
-    }
-    
-    .hamburg,
-    .cancel {
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        color: white;
-        display: none;
-        font-size: 2.5rem;
-    }
-    
-    .nav-container .links {
-        display: flex;
-        gap: 30px;
-    }
-    
-    .nav-container .links a {
-        position: relative;
-        font-size: 1.2rem;
-        color: #f5f5f5;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-    
-    .nav-container .links a::before {
-        position: absolute;
-        content: "";
-        bottom: -3px;
-        left: 0;
-        width: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #00d4ff, #ff007a);
-        transition: width 0.3s ease;
-    }
-    
-    .nav-container .links a:hover::before {
-        width: 100%;
-    }
-    
-    .nav-container .links a:hover {
-        color: #ff007a;
-    }
-    
-    section {
-        width: 100%;
-        height: 120vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #243b55, #141e30);
-    }
-    
-    .main-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .main-container .image {
-        width: 450px;
-        height: 450px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
-    }
-    
-    .main-container .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-    
-    .main-container .image:hover img {
-        transform: scale(1.1);
-    }
-    
-    .main-container .content {
-        width: 50%;
-    }
-    
-    .content h1 {
-        font-size: 3rem;
-        color: #00d4ff;
-        text-shadow: 0 0 10px #00d4ff;
-    }
-    
-    .content h1 span {
-        color: #ff007a;
-        text-shadow: 0 0 10px #ff007a;
-    }
-    
-    .content .typewriter {
-        font-size: 2rem;
-        margin-top: 20px;
-        color: #ff007a;
-        text-shadow: 0 0 10px #ff007a;
-    }
-    
-    .content p {
-        font-size: 1.2rem;
-        margin: 20px 0;
-        line-height: 1.6;
-        color: #f5f5f5;
-    }
-    
-    .social-links {
-        display: flex;
-        gap: 15px;
-    }
-    
-    .social-links i {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        background: transparent;
-        border: 2px solid #00d4ff;
-        border-radius: 50%;
-        color: #00d4ff;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
-    }
-    
-    .social-links i:hover {
-        background: linear-gradient(135deg, #00d4ff, #ff007a);
-        color: #fff;
-        transform: scale(1.2);
-    }
-    
-    button, #button {
-        padding: 15px 50px;
-        background: linear-gradient(135deg, #00d4ff, #ff007a);
-        color: #fff;
-        border: none;
-        border-radius: 30px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    
-    button:hover, #button:hover {
-        background: #fff;
-        color: #ff007a;
-        box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        transform: scale(1.1);
-    }
-    .home-img {
-            animation: spin-shadow 4s linear infinite;
 
-            border-radius: 50%;
+
+</head>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --background-color: #34495e;;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .navbar {
+        transition: all 0.3s ease;
+        background-color: #6586a7;
+        
+    }
+    .navbar-brand {
+        transition: transform 0.3s ease;
+    }
+    .navbar-brand:hover {
+        transform: scale(1.05);
+    }
+    .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+        padding-bottom: 5px;
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease;
+    }
+    .nav-link:hover {
+        color: var(--accent-color);
+    }
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        .navbar-nav {
+            text-align: center;
+        }
+    }
 
 
-a{
-    text-decoration: none;
+
+    .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #b8b9bb 0%, #3d6a97 100%);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+}
+
+.home-img {
+    flex: 0 0 40%;
+    position: relative;
+    z-index: 1;
 }
 
 .home-img img {
-    position: relative;
-    width: 30vw;
-    height: 30vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    object-fit: cover;
+    aspect-ratio: .5/.6;
 }
 
 .home-img img:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
-
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
 }
-        #about{
-            padding-top: 90px;
-        }
 
-        
-        .bar1, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7, .bar8{
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #00d4ff, #ff007a);
-            border-radius: 5px;
-            /* overflow: hidden; */
-            animation: slide 3s ease-out forwards;
-        }
-        @keyframes slide {
-            0% {
-                width: 0%;
-            }
-            100% {
-                width: 100%;
-            }
-        }
+.content {
+    flex: 0 0 55%;
+    padding-left: 3rem;
+}
 
-        .bar2{
-            animation: slide1 3s ease-out forwards;
-        }
-        @keyframes slide1 {
-            0% {
-                width: 0%;
-            }
-            90% {
-                width: 90%;
-            }
-        }
+.content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
 
-        .bar4{
-            animation: slide4 3s ease-out forwards;
-        }
-        @keyframes slide4 {
-            0% {
-                width: 0%;
-            }
-            75% {
-                width: 75%;
-            }
-        }
+.content h1 span {
+    color: #3498db;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .bar3{
-            animation: slide3 3s ease-out forwards;
-        }
-        @keyframes slide3 {
-            0% {
-                width: 0%;
-            }
-            70% {
-                width: 70%;
-            }
-        }
+.typewriter {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
 
-        .bar7{
-            animation: slide7 3s ease-out forwards;
-        }
-        @keyframes slide7 {
-            0% {
-                width: 0%;
-            }
-            85% {
-                width: 85%;
-            }
-        }
+.typewriter-text {
+    color: #e74c3c;
+}
 
-        .bar8{
-            animation: slide8 3s ease-out forwards;
-        }
-        @keyframes slide8 {
-            0% {
-                width: 0%;
-            }
-            60% {
-                width: 60%;
-            }
-        }
-   
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-    
-    @media (max-width: 884px) {
-        .nav-container .links {
-            display: none;
+.social-links a {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.2);
+    color: #3498db;
+}
+
+#button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+#button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .home-img, .content {
+        flex: 0 0 100%;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Premium About Me Section Styling */
+#aboutme1 {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 6rem 0;
+}
+
+.main2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(44, 62, 80, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+#about {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about i {
+    color: #3498db;
+    margin-right: 1rem;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+p.text-white {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+p.text-white strong {
+    color: #3498db;
+    font-weight: 600;
+}
+
+#personal-details h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#personal-details h2 i {
+    color: #2ecc71;
+    margin-right: 1rem;
+}
+
+#personal-details h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(45deg, #2ecc71, #3498db);
+    border-radius: 2px;
+}
+
+#personal-details ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#personal-details ul li {
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#personal-details ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+#personal-details ul li strong {
+    color: #3498db;
+    margin-right: 0.5rem;
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #personal-details ul {
+        grid-template-columns: 1fr;
+    }
+
+    #about {
+        font-size: 2.5rem;
+    }
+
+    p.text-white {
+        font-size: 1rem;
+    }
+}
+/* Premium Skills Section Styling */
+#skill1 {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 6rem 0;
+}
+
+#skill .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#skill #about {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skill #about i {
+    color: #3498db;
+    margin-right: 1rem;
+}
+
+#skill #about::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.skill-card {
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+.skill-card .skill-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card .skill-icon:hover {
+    transform: rotateY(20deg) scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card .skill-icon img {
+    max-width: 80px;
+    max-height: 80px;
+    transition: transform 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.skill-card .skill-icon:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+.skill-card .skill-name {
+    color: white;
+    margin-top: 1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-name {
+    color: #3498db;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #skill #about {
+        font-size: 2.5rem;
+    }
+
+    .skill-card .skill-icon {
+        padding: 1.5rem;
+    }
+
+    .skill-card .skill-icon img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
+
+/* Additional Hover and Interaction Effects */
+.skill-card .skill-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Premium Education Section Styling */
+#education1 {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 6rem 0;
+}
+
+#education {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#education #about {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#education #about i {
+    color: #3498db;
+    margin-right: 1rem;
+}
+
+#education #about::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.card {
+    background: linear-gradient(90deg, #00d4ff, #ff007a) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3) !important;
+}
+
+.card-body {
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+#about1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#text {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1rem;
+}
+
+#num {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+    position: relative;
+}
+
+#num::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: rgba(255,255,255,0.6);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #education #about {
+        font-size: 2.5rem;
+    }
+
+    #about1 {
+        font-size: 1.8rem;
+    }
+
+    #text {
+        font-size: 1.1rem;
+    }
+
+    #num {
+        font-size: 1.3rem;
+    }
+}
+
+/* Add some subtle animation to cards */
+@keyframes cardFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.card {
+    animation: cardFloat 3s ease-in-out infinite;
+}
+
+
+#education1 {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        padding: 6rem 0;
+    }
+
+    /* Container Styling */
+    .education-container {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    /* Title Styling */
+    .education-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #00e0ff;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .education-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(45deg, #00e0ff, #ff007a);
+        border-radius: 2px;
+    }
+
+    /* Glassmorphism Card */
+    .education-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* 3D Hover Effect */
+    .education-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Neon Glow Effect */
+    .education-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 224, 255, 0.2), rgba(255, 0, 122, 0.2));
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    .education-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Text Styling */
+    .education-card h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #00e0ff;
+    }
+
+    .education-card h5 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #ddd;
+    }
+
+    .education-card h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #ff007a;
+    }
+
+    /* Subtle Floating Animation */
+    @keyframes cardFloat {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+    }
+
+    .education-card {
+        animation: cardFloat 3s ease-in-out infinite;
+    }
+
+    /* Fade & Slide Animation */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+
+    .slide-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideUp 1s ease-out forwards;
+    }
+
+    /* Delayed Staggered Animations */
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
         }
-    
-        .hamburg,
-        .cancel {
-            display: block;
-        }
-    
-        .main-container {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-        .main-container .content {
-            width: 90%;
-        }
-    
-        .main-container .image {
-            width: 300px;
-            height: 300px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
-    
-    @media (max-width: 440px) {
-        .main-container .content {
-            width: 100%;
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
         }
-    
-        .main-container button {
-            padding: 10px 40px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .education-title {
+            font-size: 2rem;
+        }
+
+        .education-card h2 {
+            font-size: 1.5rem;
+        }
+
+        .education-card h5 {
+            font-size: 1rem;
+        }
+
+        .education-card h3 {
             font-size: 1rem;
         }
     }
-    @media (max-width: 770px){
-        #projects1{
-            padding-top: 15%;
-            /* height: 500px; */
-
-        }
-        #projects{
-            height: 2100px;
-
-        }
-
-    }
-    @media (max-width: 770px){
-        #contact1{
-            padding-top: 25%;
 
 
-        }
 
+
+
+           /* Premium Section Styling */
+    #projects {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        padding: 80px 0;
     }
 
-
-    @media (max-width: 520px){
-        #skill{
-            padding-top: 45%;
-
-
-        }
-
+    /* Section Title */
+    .projects-title {
+        color: #f8f9fa;
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
     }
 
-    @media (max-width: 500px){
-        #skill{
-            padding-top: 5%;
-        }
-        #skill1{
-            height: 1200px;
-        }
-        #education{
-            padding-top: 5%;
-        }
-        #education1{
-            height: 1200px;
-        }
-        #aboutme{
-            padding-top: 15%;
-        }
-        #aboutme1{
-            height: 1400px;
-        }
-
+    /* Premium Project Cards */
+    .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
     }
-.project-image{
-    border-radius: 10px;
-}
- 
 
-    
+    /* Hover Effect */
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Project Images */
+    .project-image {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-image {
+        transform: scale(1.05);
+    }
+
+    /* Project Content */
+    .project-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #ffdd57;
+    }
+
+    .project-description {
+        font-size: 1.1rem;
+        color: #e2e8f0;
+        margin: 15px 0;
+    }
+
+    /* Button Styling */
+    .btn-custom {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        transform: scale(1.05);
+    }
+
+    .btn-primary {
+        background: linear-gradient(90deg, #ffdd57, #ff8c00);
+        border: none;
+        color: #1e293b;
+    }
+
+    .btn-secondary {
+        background: linear-gradient(90deg, #3b82f6, #1e40af);
+        border: none;
+        color: #f8f9fa;
+    }
+
+
+
+    #projects {
+        background: radial-gradient(circle, #0f172a, #1e293b);
+        padding: 80px 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Section Title */
+    .projects-title {
+        color: #f8f9fa;
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        position: relative;
+        animation: fadeInDown 1.5s ease-in-out;
+    }
+
+    /* Glowing Cards */
+    .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+        overflow: hidden;
+        border: 2px solid transparent;
+        position: relative;
+    }
+
+    /* Glowing Hover Effect */
+    .project-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        border: 2px solid #ffdd57;
+    }
+
+    /* Hover Glow Border Animation */
+    .project-card::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-radius: 12px;
+        background: linear-gradient(90deg, #ffdd57, #ff007a);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .project-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Project Images */
+    .project-image {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-image {
+        transform: scale(1.1);
+    }
+
+    /* Project Content */
+    .project-content {
+        padding: 20px;
+        text-align: center;
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #ffdd57;
+    }
+
+    .project-description {
+        font-size: 1.1rem;
+        color: #e2e8f0;
+        margin: 15px 0;
+    }
+
+    /* Buttons */
+    .btn-custom {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        transform: scale(1.05);
+    }
+
+    .btn-primary {
+        background: linear-gradient(90deg, #ffdd57, #ff8c00);
+        border: none;
+        color: #1e293b;
+    }
+
+    .btn-secondary {
+        background: linear-gradient(90deg, #3b82f6, #1e40af);
+        border: none;
+        color: #f8f9fa;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+
+
+
+    /* Glow Effect for Title */
+    .glow-text {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #00d4ff;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .glow-text::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(45deg, #00d4ff, #ff007a);
+        border-radius: 2px;
+    }
+
+    /* Glassmorphism Form */
+    .glass-form {
+        max-width: 600px;
+        margin: auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+
+    /* Input Fields */
+    .input-box {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .input-box input, .input-box textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        color: #fff;
+        border-radius: 8px;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .input-box textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    .input-box input:focus, .input-box textarea:focus {
+        border-color: #00d4ff;
+        box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.5);
+    }
+
+    /* Floating Labels */
+    .input-box label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label,
+    .input-box textarea:focus ~ label,
+    .input-box textarea:valid ~ label {
+        top: -5px;
+        left: 10px;
+        font-size: 0.85rem;
+        color: #00d4ff;
+    }
+
+    /* Neon Button */
+    .neon-button {
+        background: linear-gradient(90deg, #00d4ff, #ff007a);
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        text-transform: uppercase;
+    }
+
+    .neon-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: left 0.4s ease-in-out;
+    }
+
+    .neon-button:hover::before {
+        left: 100%;
+    }
+
+    .neon-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.5);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .glow-text {
+            font-size: 2rem;
+        }
+
+        .glass-form {
+            padding: 20px;
+        }
+
+        .input-box input, .input-box textarea {
+            font-size: 1rem;
+        }
+
+        .neon-button {
+            font-size: 1rem;
+        }
+    }
+
+
+
     </style>
 </head>
-
 <body>
-    <nav style="position: fixed;">
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                AKSHAY<span>KUMAR K</span>
-            </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a
-                        href="#home">Home</a>
-                </div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a
-                        href="#aboutme">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a
-                        href="#skill">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a
-                        href="#education">Education</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a
-                        href="#projects">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a
-                        href="#contact">Contact</a></div>
+    <nav class="navbar navbar-expand-lg fixed-top  shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 text-primary" href="#">
+                AKSHAY<span class="text-danger">KUMAR K</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="#aboutme">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="#skill">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-
     </nav>
+
+
+
+
     <section class="mt-5">
         <div id="home" class="main-container mb-5">
             <div class="home-img" data-aos="zoom-out" data-aos-duration="3000">
                 <!-- <img id="img1" src="/portfolio/static/images/WhatsApp Image 2025-01-24 at 1.11.21 PM.jpeg" alt=""> -->
-                <img id="img1" src="{{ url_for('static', filename='/images/WhatsApp Image 2025-01-24 at 1.11.21 PM.jpeg') }}">
+                <img id="img1" src="/static/images/my-pic.jpeg">
 
             </div>
             <div class="content">
@@ -455,13 +1191,13 @@ a{
                         class="typewriter-text"></span><label for="">|</label></div>
 
                 <div class="social-links">
-                    <a href="https://github.com/agnaey" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i
+                    <a href="https://github.com/akshaykumark1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i
                             class="fa-brands fa-github"></i></a>
-                    <a href="https://www.facebook.com/agnaeyviswanath.viswanath" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i
+                    <a href="https://www.facebook.com/akshayachu" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i
                             class="fa-brands fa-facebook"></i></a>
-                    <a href=" https://in.linkedin.com/in/agnaey-viswanath-41a894315" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i
+                    <a href=" https://in.linkedin.com/in/Akshay Kumar k" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i
                             class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/agnaey__" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i
+                    <a href="https://www.instagram.com/its__akshay_here" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i
                             class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class=" mt-5 mb-5" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
@@ -470,6 +1206,11 @@ a{
             </div>
         </div>
     </section>
+
+
+
+
+
 
     <div>
         <section id="aboutme1" class="mt-5">
@@ -511,307 +1252,308 @@ a{
         </section>
     </div>
     
-        <section id="skill1">
-            <div id="skill">
-                <div class="container">
-                    <h1 id="about" class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-computer"></i></i>&nbsp;&nbsp;Skills</h1>
-                        
-                    <div class="row text-center">
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500">
-                            <div class="skill-icon">
-                                <a href="https://html.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/html.png') }}" alt="HTML" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">HTML</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                            <div class="skill-icon">
-                                <a href="https://www.w3.org/Style/CSS/Overview.en.html" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-css-96.png') }}" alt="CSS" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">CSS</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <div class="skill-icon">
-                                <a href="https://getbootstrap.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-bootstrap-96.png') }}" alt="Bootstrap" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">Bootstrap</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                            <div class="skill-icon">
-                                <a href="https://www.javascript.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-js-96.png') }}" alt="JavaScript" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">JavaScript</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-                            <div class="skill-icon">
-                                <a href="https://www.python.org/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-python-96.png') }}" alt="Python" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">Python</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                            <div class="skill-icon">
-                                <a href="https://www.djangoproject.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/dj.png') }}" alt="Django" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">Django</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
-                            <div class="skill-icon">
-                                <a href="https://react.dev/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-react-80.png') }}" alt="React" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">React</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                            <div class="skill-icon">
-                                <a href="https://flask.palletsprojects.com/en/stable/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-flask-100.png') }}" alt="Flask" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">Flask</p>
-                        </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-                            <div class="skill-icon">
-                                <a href="https://www.mysql.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-mysql-96.png') }}" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">MySQL</p>
-                        </div>
 
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                            <div class="skill-icon">
-                                <a href="https://www.sqlite.org/index.html" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/sqlite-svgrepo-com.svg') }}" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">Sqlite</p>
-                        </div>
 
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
-                            <div class="skill-icon">
-                                <a href="https://git-scm.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-git-96.png') }}" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">Git</p>
+
+
+
+
+    <section id="skill1">
+        <div id="skill">
+            <div class="container">
+                <h1 id="about" class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-computer"></i></i>&nbsp;&nbsp;Skills</h1>
+                    
+                <div class="row text-center">
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="skill-icon">
+                            <a href="https://html.com/" style="text-decoration: none;">
+                                <img src="/static/images/html.png" alt="HTML" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
                         </div>
-                        <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
-                            <div class="skill-icon">
-                                <a href="https://www.github.com/" style="text-decoration: none;">
-                                    <img src="{{ url_for('static',filename='images/icons8-github-128.png') }}" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
-                                </a>
-                            </div>
-                            <p class="skill-name">GitHub</p>
+                        <p class="skill-name">HTML</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <a href="https://www.w3.org/Style/CSS/Overview.en.html" style="text-decoration: none;">
+                                <img src="/static/images/css.png" alt="CSS" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
                         </div>
-                        
+                        <p class="skill-name">CSS</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <a href="https://getbootstrap.com/" style="text-decoration: none;">
+                                <img src="/static/images/bootstrap.jpeg" alt="Bootstrap" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">Bootstrap</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <a href="https://www.javascript.com/" style="text-decoration: none;">
+                                <img src="/static/images/js.webp" alt="JavaScript" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">JavaScript</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <a href="https://www.python.org/" style="text-decoration: none;">
+                                <img src="/static/images/python.webp" alt="Python" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">Python</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <a href="https://www.djangoproject.com/" style="text-decoration: none;">
+                                <img src="/static/images/dj.png" alt="Django" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">Django</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                        <div class="skill-icon">
+                            <a href="https://react.dev/" style="text-decoration: none;">
+                                <img src="/static/images/react.webp" alt="React" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">React</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <a href="https://flask.palletsprojects.com/en/stable/" style="text-decoration: none;">
+                                <img src="/static/images/flask.jpg" alt="Flask" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">Flask</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <a href="https://www.mysql.com/" style="text-decoration: none;">
+                                <img src="/static/images/mysql.png" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">MySQL</p>
+                    </div>
+
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <a href="https://www.sqlite.org/index.html" style="text-decoration: none;">
+                                <img src="/static/images/sqlite-svgrepo-com.svg" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">Sqlite</p>
+                    </div>
+
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                        <div class="skill-icon">
+                            <a href="https://git-scm.com/" style="text-decoration: none;">
+                                <img src="/static/images/icons8-git-96(1).png" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">Git</p>
+                    </div>
+                    <div class="col-md-3 col-6 col-sm-6 skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+                        <div class="skill-icon">
+                            <a href="https://www.github.com/" style="text-decoration: none;">
+                                <img src="/static/images/icons8-github-128.png" alt="MySQL" class="img-fluid mb-2" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
+                        <p class="skill-name">GitHub</p>
                     </div>
                     
-                    
-
                 </div>
-            </div>
-        </section>
-
-        <section id="education1">
-            <div id="education" class="container">
-            <h1 id="about" class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1500"><i class="fa-solid fa-user-graduate"></i>&nbsp;&nbsp;Education</h1>
-            <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
-            class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-           <div class="card-body text-white text-center">
-               <h2 id="about1" class="card-title">PYTHON FULL-STACK</h2>
-               <h5 id="text" class="card-text">SYNNEFO SOLUTIONS Kochi</h5>
-               <h3 id="num">2024-2025</h3>
-           </div>
-       </div>
-       
-       <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
-            class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-           <div class="card-body text-white text-center">
-               <h2 id="about1" class="card-title">BCA</h2>
-               <h5 id="text" class="card-text">IHRD Nadapuram</h5>
-               <h3 id="num">2021-2024</h3>
-           </div>
-       </div>
-       
-       <div style="background: linear-gradient(90deg, #00d4ff, #ff007a); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" 
-            class="card mb-3" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-           <div class="card-body text-white text-center">
-               <h2 id="about1" class="card-title">Computer Science</h2>
-               <h5 id="text" class="card-text">PRMKHSS Kolavalloor</h5>
-               <h3 id="num">2019-2021</h3>
-           </div>
-       </div>
-       
-        </div>
-        
-        </section>
-        <section id="projects" class="mt-5">
-            <div class="container" id="projects1">
-                <h1 id="about"  class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500">
-                    <i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Projects
-                </h1>
-                <div class="row">
-
-                    <div class="col-md-4 mb-4">
-                        <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <img src="{{ url_for('static', filename='/images/project1.png') }}" alt="Project 1" class="project-image img-fluid">
-                            <div class="project-content">
-                                <h3 class="project-title text-center mt-3">Flipkart E-Commerce Clone</h3>
-                                <p class="project-description mb-5">This project is a web application built with Django, designed to replicate the core features of the Flipkart e-commerce platform. The application allows users to browse products, add them to their cart, and make purchases. It also includes features such as product search,
-                                     filtering by categories, user registration and login, order tracking, and payment integration.</p>
-                                     <div class="d-flex flex-wrap justify-content-center gap-3">
-                                <a href="https://github.com/agnaey/flipkart_django" class="" id="button" target="_blank"><i class="fa-brands fa-github gap-3"></i>View Project</a>
-                                <a href="http://filpkart.pythonanywhere.com/" class="btn btn-secondary" id="button" target="_blank">
-                                    <i class="fa-solid fa-link"></i> Visit Site</a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <img src="{{ url_for('static', filename='/images/project2.png') }}" alt="Project 1" class="project-image img-fluid">
-                            <div class="project-content">
-                                <h3 class="project-title text-center mt-3">bookmyshow</h3>
-                                <p class="project-description mb-5">BookMyShow is a dynamic and user-friendly event booking website created using HTML, CSS, and Bootstrap. It allows users to browse and book tickets for movies, concerts, plays, and other events effortlessly. The design features a modern, responsive layout with intuitive navigation, ensuring seamless usability across devices.</p>
-                                    <div class="d-flex flex-wrap justify-content-center gap-3">
-
-                                <a href="https://github.com/agnaey/bookmyshow" class="" id="button" target="_blank"><i class="fa-brands fa-github gap-3"></i>View Project</a>
-                                <a href="https://agnaey.github.io/bookmyshow/intex.html" class="btn btn-secondary" id="button" target="_blank">
-                                    <i class="fa-solid fa-link"></i> Visit Site</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="project-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                            <img src="{{ url_for('static', filename='/images/project3.png') }}" alt="Project 1" class="project-image img-fluid">
-                            <div class="project-content">
-                                <h3 class="project-title text-center mt-3">Puma clone</h3>
-                                <p class="project-description mb-5">This project focuses on replicating the homepage layout and design of Puma’s official website. The homepage is built using HTML for structure, CSS for styling, and Bootstrap for responsiveness and grid layout. Key features include a clean and modern interface with product showcases, navigation bar,
-                                     promotional banners, and footer. Bootstrap ensures the page is mobile-friendly and adapts to various screen size.</p>
-                                     <div class="d-flex flex-wrap justify-content-center gap-3">
-                                        <a href="https://github.com/agnaey/puma" class="btn btn-primary" id="button" target="_blank">
-                                          <i class="fa-brands fa-github"></i> View Project
-                                        </a>
-                                        <a href="https://agnaey.github.io/puma/home.html" class="btn btn-secondary" id="button" target="_blank">
-                                          <i class="fa-solid fa-link"></i> Visit
-                                        </a>
-                                      </div>
-                                      
-
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            </div>
-        </section>
-        
-
-        <section id="contact" style="background-color: #000; color: #fff; padding: 50px 0;">
-            <div class="container" id="contact1">
-                <h1 id="about" class="text-center mb-5" data-aos="zoom-in" data-aos-duration="1500">
-                    <i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Me
-                </h1>
-        
-                <!-- Contact Form -->
-                <form action="/send_mail" id="contactForm" method="POST" style="max-width: 600px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="mb-3">
-                        <label for="name" class="form-label" style="color: #fff;">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" 
-                            style="background: linear-gradient(90deg, #00d4ff, #ff007a); 
-                                   color: #fff; border: 1px solid #00d4ff;" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label" style="color: #fff;">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" 
-                            style="background: linear-gradient(90deg, #ff007a, #00d4ff); color: #fff;" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label" style="color: #fff;">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" 
-                            style="background: linear-gradient(90deg, #00d4ff, #ff007a); 
-                                   color: #fff; border: 1px solid #00d4ff;" required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" id="button" class="btn" style=" padding: 10px 20px;  cursor: pointer;">
-                            Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        
-
-                </div>
-             
+                
                 
 
             </div>
-        </section>
+        </div>
+    </section>
 
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    
+    
+<section id="education1" class="fade-in">
+    <div class="education-container">
+        <h1 class="education-title"><i class="fa-solid fa-user-graduate"></i>&nbsp;&nbsp;Education</h1>
+        <div class="education-card slide-up delay-1">
+            <h2>PYTHON FULL-STACK</h2>
+            <h5>SYNNEFO SOLUTIONS, Kochi</h5>
+            <h3>2024-2025</h3>
+        </div>
+        <div class="education-card slide-up delay-2">
+            <h2>Bachelor of Computer Applications (BCA)</h2>
+            <h5>IHRD, Nadapuram</h5>
+            <h3>2021-2024</h3>
+        </div>
+        <div class="education-card slide-up delay-3">
+            <h2>Computer Science</h2>
+            <h5>PRMKHSS, Kolavalloor</h5>
+            <h3>2019-2021</h3>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="projects">
+    <div class="container">
+        <h1 class="projects-title"><i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Projects</h1>
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="{{ url_for('static', filename='/images/project1.png') }}" alt="Project 1" class="project-image img-fluid">
+                    <div class="project-content">
+                        <h3 class="project-title">Flex Forge</h3>
+                        <p class="project-description">
+                            A Django-based Flipkart clone with product search, cart, order tracking, and secure payment integration.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="https://github.com/akshaykumark1/flex-forge" class="btn btn-custom btn-primary" target="_blank">
+                                <i class="fa-brands fa-github"></i> View Project
+                            </a>
+                            <a href="#" class="btn btn-custom btn-secondary" target="_blank">
+                                <i class="fa-solid fa-link"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="{{ url_for('static', filename='/images/project2.png') }}" alt="Project 2" class="project-image img-fluid">
+                    <div class="project-content">
+                        <h3 class="project-title">BookMyShow Clone</h3>
+                        <p class="project-description">
+                            A movie and event booking website with a responsive, intuitive design using HTML, CSS, and Bootstrap.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="#" class="btn btn-custom btn-primary" target="_blank">
+                                <i class="fa-brands fa-github"></i> View Project
+                            </a>
+                            <a href="#" class="btn btn-custom btn-secondary" target="_blank">
+                                <i class="fa-solid fa-link"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="{{ url_for('static', filename='/images/project3.png') }}" alt="Project 3" class="project-image img-fluid">
+                    <div class="project-content">
+                        <h3 class="project-title">Apple Clone</h3>
+                        <p class="project-description">
+                            A responsive homepage clone of Apple’s website using HTML, CSS, and Bootstrap with a modern UI.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="#" class="btn btn-custom btn-primary" target="_blank">
+                                <i class="fa-brands fa-github"></i> View Project
+                            </a>
+                            <a href="#" class="btn btn-custom btn-secondary" target="_blank">
+                                <i class="fa-solid fa-link"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section id="contact" style="background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; padding: 80px 0; overflow: hidden;">
+    <div class="container" id="contact1">
+        <h1 id="about" class="text-center mb-5 glow-text" data-aos="zoom-in" data-aos-duration="1500">
+            <i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Me
+        </h1>
+
+        <!-- Contact Form -->
+        <form action="/send_mail" id="contactForm" method="POST" class="glass-form" data-aos="fade-up" data-aos-duration="1500">
+            <div class="input-box">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" id="button" class="neon-button">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ offset: 0 });
-    </script>
-    <script>
-        function hamburg() {
-            const navbar = document.querySelector(".dropdown")
-            navbar.style.transform = "translateY(0px)"
-        }
-        function cancel() {
-            const navbar = document.querySelector(".dropdown")
-            navbar.style.transform = "translateY(-500px)"
-        }
-        // Typewriter Effect
-        const texts = [
-            "DEVELOPER",
-            "DESIGNER",
-            "PROGRAMMER",
-        ]
-        let speed = 100;
-        const textElements = document.querySelector(".typewriter-text");
-        let textIndex = 0;
-        let charcterIndex = 0;
-        function typeWriter() {
-            if (charcterIndex < texts[textIndex].length) {
-                textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
-                charcterIndex++;
-                setTimeout(typeWriter, speed);
-            }
-            else {
-                setTimeout(eraseText, 1000)
-            }
-        }
-        function eraseText() {
-            if (textElements.innerHTML.length > 0) {
-                textElements.innerHTML = textElements.innerHTML.slice(0, -1);
-                setTimeout(eraseText, 50)
-            }
-            else {
-                textIndex = (textIndex + 1) % texts.length;
-                charcterIndex = 0;
-                setTimeout(typeWriter, 500)
-            }
-        }
-        window.onload = typeWriter
+        AOS.init();
     </script>
 
-   
+<script>
+    AOS.init({ offset: 0 });
+</script>
+<script>
+    function hamburg() {
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(0px)"
+    }
+    function cancel() {
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(-500px)"
+    }
+    // Typewriter Effect
+    const texts = [
+        "DEVELOPER",
+        "DESIGNER",
+        "PROGRAMMER",
+    ]
+    let speed = 100;
+    const textElements = document.querySelector(".typewriter-text");
+    let textIndex = 0;
+    let charcterIndex = 0;
+    function typeWriter() {
+        if (charcterIndex < texts[textIndex].length) {
+            textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+            charcterIndex++;
+            setTimeout(typeWriter, speed);
+        }
+        else {
+            setTimeout(eraseText, 1000)
+        }
+    }
+    function eraseText() {
+        if (textElements.innerHTML.length > 0) {
+            textElements.innerHTML = textElements.innerHTML.slice(0, -1);
+            setTimeout(eraseText, 50)
+        }
+        else {
+            textIndex = (textIndex + 1) % texts.length;
+            charcterIndex = 0;
+            setTimeout(typeWriter, 500)
+        }
+    }
+    window.onload = typeWriter
+</script>
 </body>
-
 </html>
